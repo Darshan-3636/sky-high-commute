@@ -217,3 +217,15 @@
 .leaflet-control-zoom a:hover {
   background: oklch(0.30 0.05 220) !important;
 }
+/* Keep Leaflet panes/controls below Radix dialog overlay (z-50) */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 1 !important;
+}
+.leaflet-pane.leaflet-overlay-pane,
+.leaflet-pane.leaflet-marker-pane,
+.leaflet-pane.leaflet-tooltip-pane,
+.leaflet-pane.leaflet-popup-pane {
+  z-index: 2 !important;
+}
