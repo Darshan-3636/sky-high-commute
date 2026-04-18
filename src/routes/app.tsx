@@ -81,7 +81,7 @@ function AppPage() {
 
       <div className="relative flex flex-1 flex-col lg:flex-row">
         {/* Map area */}
-        <div className="relative h-[55vh] flex-1 lg:h-auto">
+        <div className="relative h-[55vh] min-h-[320px] w-full flex-shrink-0 lg:h-auto lg:flex-1">
           <FlyMap start={start} end={end} onMapClick={onMapClick} flyTo={flyTo} />
 
           {/* Picking hint */}
