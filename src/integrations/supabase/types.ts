@@ -14,7 +14,87 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+          payment_method: string | null
+          phone: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          payment_method?: string | null
+          phone?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          payment_method?: string | null
+          phone?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      trips: {
+        Row: {
+          created_at: string
+          distance_km: number
+          end_label: string
+          end_lat: number
+          end_lng: number
+          eta_minutes: number
+          id: string
+          start_label: string
+          start_lat: number
+          start_lng: number
+          status: string
+          tier: string
+          total_cost: number
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          distance_km: number
+          end_label: string
+          end_lat: number
+          end_lng: number
+          eta_minutes: number
+          id?: string
+          start_label: string
+          start_lat: number
+          start_lng: number
+          status?: string
+          tier: string
+          total_cost: number
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          distance_km?: number
+          end_label?: string
+          end_lat?: number
+          end_lng?: number
+          eta_minutes?: number
+          id?: string
+          start_label?: string
+          start_lat?: number
+          start_lng?: number
+          status?: string
+          tier?: string
+          total_cost?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
