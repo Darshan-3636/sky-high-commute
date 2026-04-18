@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { MapPinned, ArrowDownUp, Loader2 } from "lucide-react";
 import { useAuth } from "@/lib/auth";
 import { AppHeader } from "@/components/AppHeader";
-import { FlyMap } from "@/components/FlyMap";
+import { FlyMapClient as FlyMap } from "@/components/FlyMapClient";
 import { LocationSearch } from "@/components/LocationSearch";
 import { TierPicker } from "@/components/TierPicker";
 import { BookingDialog } from "@/components/BookingDialog";
