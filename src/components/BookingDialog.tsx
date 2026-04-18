@@ -77,8 +77,13 @@ export function BookingDialog({ open, onClose, start, end, tier, km, onCompleted
   }
 
   return (
-    <Dialog open={open} onOpenChange={(v) => !v && phase !== "confirm" && phase !== "landed" ? null : !v && onClose()}>
-      <DialogContent className="glass-strong max-w-md border-neon/30 p-0 sm:rounded-2xl" showCloseButton={phase === "confirm" || phase === "landed"}>
+    <Dialog
+      open={open}
+      onOpenChange={(v) => {
+        if (!v && (phase === "confirm" || phase === "landed")) onClose();
+      }}
+    >
+      <DialogContent className="glass-strong max-w-md border-neon/30 p-0 sm:rounded-2xl">
         <AnimatePresence mode="wait">
           {phase === "confirm" ? (
             <motion.div
